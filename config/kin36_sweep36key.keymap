@@ -319,7 +319,7 @@
         nav {
             bindings = <
   &kp LG(Q)       &kp LG(W)      &kp LA(K)       &soft_off   &kp LA(EQUAL)     &Changetoeng      &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP      &kp LA(N8)
-  &kp LA(SLASH)   &kp LA(H)      &kp LA(J)       &kp LA(L)   &kp LA(MINUS)     &kp LA(NUMBER_6)  &kp C_PREVIOUS    &kp C_PLAY_PAUSE  &kp C_NEXT        &kp LA(NUMBER_7)
+  &kp LA(SLASH)   &kp LA(H)      &kp LA(J)       &kp LA(L)   &kp LA(MINUS)     &kp LA(NUMBER_6)  &kp K_PREV        &kp K_PLAY_PAUSE  &kp K_NEXT        &kp LA(NUMBER_7)
   &kp LEFT_SHIFT  &kp LG(SPACE)  &kp LG(LS(N5))  &kp LA(N0)  &kp LS(LA(N0))    &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)
                                  &trans          &trans      &trans            &trans            &trans            &trans
             >;
