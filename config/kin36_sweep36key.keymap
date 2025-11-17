@@ -97,7 +97,7 @@
         compatible = "zmk,combos";
 
         ENG {
-            bindings = <&Changetoeng>;
+            bindings = <&toeng>;
             key-positions = <2 3>;
             layers = <4>;
         };
@@ -109,7 +109,7 @@
         };
 
         changeru {
-            bindings = <&Changetoeng>;
+            bindings = <&torus>;
             key-positions = <6 7>;
             layers = <0>;
         };
@@ -119,8 +119,7 @@
         Changetoeng: Changetoeng {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>, <&macro_wait_time 50>;
-
+            bindings = <&kp LC(SPACE)>;
             label = "CHANGETOENG";
         };
 
@@ -268,6 +267,20 @@
             #binding-cells = <0>;
             bindings = <&Changetoeng &kp PERIOD &Changetoeng>;
             label = "RUENDOT";
+        };
+
+        toeng: toeng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&Changetoeng &tog 0>;
+            label = "TOENG";
+        };
+
+        torus: torus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&Changetoeng &tog 4>;
+            label = "TORUS";
         };
     };
 
