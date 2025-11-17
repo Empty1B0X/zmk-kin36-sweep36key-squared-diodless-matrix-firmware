@@ -110,7 +110,7 @@
 
         changeru {
             bindings = <&torus>;
-            key-positions = <6 7>;
+            key-positions = <2 3>;
             layers = <0>;
         };
     };
