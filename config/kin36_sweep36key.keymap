@@ -119,7 +119,8 @@
         Changetoeng: Changetoeng {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp LC(SPACE)>, <&macro_wait_time 50>;
+
             label = "CHANGETOENG";
         };
 
