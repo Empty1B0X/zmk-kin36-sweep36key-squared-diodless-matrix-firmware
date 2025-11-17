@@ -272,7 +272,7 @@
         toeng: toeng {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&Changetoeng &tog 0>;
+            bindings = <&Changetoeng &tog 4>;
             label = "TOENG";
         };
 
