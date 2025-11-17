@@ -154,7 +154,7 @@
         ruengreat: ruengreat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&Changetoeng &kp LESS_THAN &Changetoeng>;
+            bindings = <&Changetoeng &kp GREATER_THAN &Changetoeng>;
             label = "RUENGREAT";
         };
 
@@ -318,7 +318,7 @@
 
         nav {
             bindings = <
-  &tog 8          &kp LG(W)      &kp LA(K)       &soft_off   &kp LA(EQUAL)     &Changetoeng      &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP      &kp LA(N8)
+  &kp LG(Q)       &kp LG(W)      &kp LA(K)       &soft_off   &kp LA(EQUAL)     &Changetoeng      &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP      &kp LA(N8)
   &kp LA(SLASH)   &kp LA(H)      &kp LA(J)       &kp LA(L)   &kp LA(MINUS)     &kp LA(NUMBER_6)  &kp C_PREVIOUS    &kp C_PAUSE       &kp C_NEXT        &kp LA(NUMBER_7)
   &kp LEFT_SHIFT  &kp LG(SPACE)  &kp LG(LS(N5))  &kp LA(N0)  &kp LS(LA(N0))    &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)
                                  &trans          &trans      &trans            &trans            &trans            &trans
@@ -357,19 +357,10 @@
 
         runav {
             bindings = <
-  &tog 8          &kp LG(W)      &kp LA(K)       &soft_off   &kp LA(EQUAL)     &Changetoeng      &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP      &kp LA(N8)
+  &kp LG(Q)       &kp LG(W)      &kp LA(K)       &soft_off   &kp LA(EQUAL)     &Changetoeng      &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP      &kp LA(N8)
   &kp LA(SLASH)   &kp LA(H)      &kp LA(J)       &kp LA(L)   &kp LA(MINUS)     &kp LA(NUMBER_6)  &kp C_PREVIOUS    &kp C_PAUSE       &kp C_NEXT        &kp LA(NUMBER_7)
   &kp LEFT_SHIFT  &kp LG(SPACE)  &kp LG(LS(N5))  &kp LA(N0)  &kp LS(LA(N0))    &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)
                                  &trans          &trans      &trans            &trans            &trans            &trans
-            >;
-        };
-
-        Game {
-            bindings = <
-  &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4       &tog 8  &trans  &trans  &trans  &trans
-  &kp TAB     &kp Q   &kp W     &kp E      &kp R        &trans  &trans  &trans  &trans  &trans
-  &kp Y       &kp A   &kp B     &kp D      &kp F        &trans  &trans  &trans  &trans  &trans
-                      &kp LALT  &soft_off  &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
