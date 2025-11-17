@@ -301,7 +301,7 @@
         RUSYMB {
             display-name = "RUSYMB";
             bindings = <
-  &ruendol   &ruenless             &kp EQUAL   &ruengreat             &ruengrave        &kp CARET    &ruenopenbracket  &kp UNDERSCORE  &ruenclosebracket  &ruenquotes
+  &ruendol   &ruenless             &kp EQUAL   &ruengreat             &ruengrave        &ruencaret   &ruenopenbracket  &kp UNDERSCORE  &ruenclosebracket  &ruenquotes
   &ruenat    &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS          &kp PERCENT  &ruenopenbrace    &ruensimicolon  &ruenclosebrace    &ruenaquote
   &ruenhash  &kp ASTERISK          &ruencolon  &ruenslash             &ruentilde        &ruenpipe    &kp EXCL          &ruencomma      &ruenquest         &ruendot
                                    &trans      &mo 3                  &kp UNDERSCORE    &trans       &trans            &trans
