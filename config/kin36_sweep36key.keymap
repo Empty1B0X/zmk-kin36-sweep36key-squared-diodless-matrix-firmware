@@ -57,6 +57,27 @@
             bindings = <&kp>, <&kp>;
         };
 
+        tdm: tdm {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDM";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp LEFT_BRACKET>;
+        };
+
+        tdcomma: tdcomma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDCOMMA";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SINGLE_QUOTE>;
+        };
+
+        tddot: tddot {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDDOT";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp RIGHT_BRACKET>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
@@ -70,20 +91,197 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
-        tri_layer {
-            if-layers = <1 1>;
-            then-layer = <1>;
+    combos {
+        compatible = "zmk,combos";
+
+        Rus {
+            bindings = <&changetorus>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        ENG {
+            bindings = <&Changetoeng>;
+            key-positions = <2 3>;
+            layers = <4>;
+        };
+
+        newline {
+            bindings = <&kp LS(ENTER)>;
+            key-positions = <20 33>;
+            layers = <0 4>;
+        };
+    };
+
+    macros {
+        Changetoeng: Changetoeng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &tog 0>;
+            label = "CHANGETOENG";
+        };
+
+        changetorus: changetorus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_2) &tog 4>;
+            label = "CHANGETORUS";
+        };
+
+        ruendol: ruen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp DOLLAR &kp LG(NUMBER_2)>;
+            label = "RUEN";
+        };
+
+        ruenat: ruenat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp AT_SIGN &kp LG(NUMBER_2)>;
+            label = "RUENAT";
+        };
+
+        ruenhash: ruencell {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp HASH &kp LG(NUMBER_2)>;
+            label = "RUENCELL";
+        };
+
+        ruenless: ruenless {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp LESS_THAN &kp LG(NUMBER_2)>;
+            label = "RUENLESS";
+        };
+
+        ruengreat: ruengreat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp LESS_THAN &kp LG(NUMBER_2)>;
+            label = "RUENGREAT";
+        };
+
+        ruengrave: ruengrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp GRAVE &kp LG(NUMBER_2)>;
+            label = "RUENGRAVE";
+        };
+
+        ruencolon: ruencolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp COLON &kp LG(NUMBER_2)>;
+            label = "RUENCOLON";
+        };
+
+        ruenslash: ruenslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp LG(BACKSLASH) &kp LG(NUMBER_2)>;
+            label = "RUENSLASH";
+        };
+
+        ruentilde: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp TILDE &kp LG(NUMBER_2)>;
+            label = "NEW_MACRO";
+        };
+
+        ruencaret: ruencaret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp CARET &kp LG(NUMBER_2)>;
+            label = "RUENCARET";
+        };
+
+        ruenopenbracket: ruenopenbracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp LEFT_BRACKET &kp LG(NUMBER_2)>;
+        };
+
+        ruenclosebracket: ruenclosebracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp RIGHT_BRACKET &kp LG(NUMBER_2)>;
+            label = "RUENCLOSEBRACKET";
+        };
+
+        ruenquotes: ruendunno {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp DOUBLE_QUOTES &kp LG(NUMBER_2)>;
+            label = "RUENDUNNO";
+        };
+
+        ruenopenbrace: ruenopenbrace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp LEFT_BRACE &kp LG(NUMBER_2)>;
+            label = "RUENOPENBRACE";
+        };
+
+        ruenclosebrace: ruenclosebrace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp RIGHT_BRACE &kp LG(NUMBER_2)>;
+            label = "RUENCLOSEBRACE";
+        };
+
+        ruenaquote: ruenasteriks {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp SINGLE_QUOTE &kp LG(NUMBER_2)>;
+            label = "RUENASTERIKS";
+        };
+
+        ruenpipe: ruenpipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp PIPE &kp LG(NUMBER_2)>;
+            label = "ruenpipe";
+        };
+
+        ruensimicolon: ruensimicolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp SEMICOLON &kp LG(NUMBER_2)>;
+            label = "RUENSIMICOLON";
+        };
+
+        ruencomma: ruencomma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp COMMA &kp LG(NUMBER_2)>;
+            label = "RUENCOMMA";
+        };
+
+        ruenquest: ruenquest {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp QUESTION &kp LG(NUMBER_2)>;
+            label = "RUENQUEST";
+        };
+
+        ruendot: ruendot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1) &kp PERIOD &kp LG(NUMBER_2)>;
+            label = "RUENDOT";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "DEFAULT";
+        ENGLISH {
+            display-name = "ENGLISH";
             bindings = <
   &kp Q             &kp W       &kp E         &kp R       &kp T                 &kp Y      &kp U       &kp I        &kp O       &kp P
   &kp A             &ht LALT S  &ht LCTRL D   &ht LGUI F  &kp G                 &kp H      &ht RGUI J  &ht RCTRL K  &ht RALT L  &kp SEMICOLON
@@ -92,8 +290,8 @@
             >;
         };
 
-        tri_layer {
-            display-name = "FUNC";
+        NUMPAD {
+            display-name = "NUMS";
             bindings = <
   &kp LG(LEFT_ARROW)    &kp LA(LEFT)    &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(RIGHT)       &kp EQUAL          &kp N7        &kp N8        &kp N9        &kp PLUS
   &kp LG(LS(UP_ARROW))  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &kp CAPSLOCK        &kp LS(N5)         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0
@@ -102,8 +300,8 @@
             >;
         };
 
-        mouse {
-            display-name = "MOUSE";
+        SYMB {
+            display-name = "SYMBOLS";
             bindings = <
   &kp DOLLAR   &kp LESS_THAN         &kp EQUAL  &kp GREATER_THAN       &kp GRAVE         &kp CARET    &kp LEFT_BRACKET  &kp UNDERSCORE  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
   &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp PLUS          &kp PERCENT  &kp LEFT_BRACE    &kp SEMICOLON   &kp RIGHT_BRACE    &kp SQT
@@ -112,7 +310,46 @@
             >;
         };
 
-        layer_3 {
+        NAV {
+            bindings = <
+  &kp LG(Q)       &soft_off      &kp LA(K)       &soft_off   &kp LA(EQUAL)     &trans            &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP      &trans
+  &kp LA(SLASH)   &kp LA(H)      &kp LA(J)       &kp LA(L)   &kp LA(MINUS)     &kp LA(NUMBER_6)  &kp C_PREVIOUS    &kp C_PAUSE       &kp C_NEXT        &kp LA(NUMBER_7)
+  &kp LEFT_SHIFT  &kp LG(SPACE)  &kp LG(LS(N5))  &kp LA(N0)  &kp LS(LA(N0))    &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)
+                                 &trans          &trans      &trans            &trans            &trans            &trans
+            >;
+        };
+
+        RUSSIAN {
+            display-name = "RUSSIAN";
+            bindings = <
+  &kp Q             &kp W       &kp E         &kp R       &kp T                 &kp Y      &kp U       &kp I        &kp O       &kp P
+  &kp A             &ht LALT S  &ht LCTRL D   &ht LGUI F  &kp G                 &kp H      &ht RGUI J  &ht RCTRL K  &ht RALT L  &kp SEMICOLON
+  &mt LEFT_SHIFT Z  &kp X       &kp C         &kp V       &kp B                 &kp N      &tdm        &tdcomma     &tddot      &mt RIGHT_SHIFT SLASH
+                                &kp LEFT_GUI  &lt 5 ESC   &mt LEFT_ALT SPACE    &kp ENTER  &lt 6 TAB   &kp BSPC
+            >;
+        };
+
+        RUNUM {
+            display-name = "RUNUM";
+            bindings = <
+  &kp LG(LEFT_ARROW)    &kp LA(LEFT)    &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(RIGHT)       &kp EQUAL          &kp N7        &kp N8        &kp N9        &kp PLUS
+  &kp LG(LS(UP_ARROW))  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &kp CAPSLOCK        &kp LS(N5)         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0
+  &kp LS(LG(DOWN))      &kp LG(X)       &kp LG(C)     &kp LG(V)      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS
+                                        &trans        &trans         &trans              &trans             &mo 7         &trans
+            >;
+        };
+
+        RUSYMB {
+            display-name = "RUSYMB";
+            bindings = <
+  &ruendol   &ruenless             &kp EQUAL   &ruengreat             &ruengrave        &kp CARET    &ruenopenbracket  &kp UNDERSCORE  &ruenclosebracket  &ruenquotes
+  &ruenat    &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS          &kp PERCENT  &ruenopenbrace    &ruensimicolon  &ruenclosebrace    &ruenaquote
+  &ruenhash  &kp ASTERISK          &ruencolon  &ruenslash             &ruentilde        &ruenpipe    &kp EXCL          &ruencomma      &ruenquest         &ruendot
+                                   &trans      &mo 7                  &kp UNDERSCORE    &trans       &trans            &trans
+            >;
+        };
+
+        runav {
             bindings = <
   &kp LG(Q)       &soft_off      &kp LA(K)       &soft_off   &kp LA(EQUAL)     &trans            &kp C_VOL_DN      &kp C_MUTE        &kp C_VOL_UP      &trans
   &kp LA(SLASH)   &kp LA(H)      &kp LA(J)       &kp LA(L)   &kp LA(MINUS)     &kp LA(NUMBER_6)  &kp C_PREVIOUS    &kp C_PAUSE       &kp C_NEXT        &kp LA(NUMBER_7)
