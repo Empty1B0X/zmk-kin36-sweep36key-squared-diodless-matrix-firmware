@@ -286,7 +286,7 @@
         fromrutogaming: fromrutogaming {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 4 &tog 8>;
+            bindings = <&tog 4 &tog 8 &Changetoeng>;
             label = "FROMRUTOGAMING";
         };
     };
