@@ -55,6 +55,8 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <50>;
         };
 
         tdm: tdm {
@@ -289,6 +291,13 @@
             bindings = <&tog 4 &tog 8 &Changetoeng>;
             label = "FROMRUTOGAMING";
         };
+
+        ruenampersand: ruenampersand {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&Changetoeng &kp AMPERSAND &Changetoeng>;
+            label = "RUENAMPERSAND";
+        };
     };
 
     keymap {
@@ -316,9 +325,9 @@
 
         SYMB {
             bindings = <
-  &kp DOLLAR   &kp LESS_THAN         &kp EQUAL  &kp GREATER_THAN       &kp GRAVE         &kp CARET    &kp LBKT         &kp UNDERSCORE  &kp RBKT         &kp DOUBLE_QUOTES
-  &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp PLUS          &kp PERCENT  &kp LEFT_BRACE   &kp SEMICOLON   &kp RIGHT_BRACE  &kp SINGLE_QUOTE
-  &kp HASH     &kp ASTERISK          &kp COLON  &kp NON_US_BACKSLASH   &kp TILDE         &kp PIPE     &kp EXCLAMATION  &kp COMMA       &kp QUESTION     &kp PERIOD
+  &kp DOLLAR   &kp LESS_THAN         &kp EQUAL  &kp GREATER_THAN       &kp GRAVE         &kp CARET    &kp LBKT         &kp AMPERSAND  &kp RBKT         &kp DOUBLE_QUOTES
+  &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp PLUS          &kp PERCENT  &kp LEFT_BRACE   &kp SEMICOLON  &kp RIGHT_BRACE  &kp SINGLE_QUOTE
+  &kp HASH     &kp ASTERISK          &kp COLON  &kp NON_US_BACKSLASH   &kp TILDE         &kp PIPE     &kp EXCLAMATION  &kp COMMA      &kp QUESTION     &kp PERIOD
                                      &trans     &mo 3                  &kp UNDERSCORE    &trans       &trans           &trans
             >;
         };
@@ -355,7 +364,7 @@
         RUSYMB {
             display-name = "RUSYMB";
             bindings = <
-  &ruendol   &ruenless             &kp EQUAL   &ruengreat             &ruengrave        &ruencaret   &ruenopenbracket  &kp UNDERSCORE  &ruenclosebracket  &ruenquotes
+  &ruendol   &ruenless             &kp EQUAL   &ruengreat             &ruengrave        &ruencaret   &ruenopenbracket  &ruenampersand  &ruenclosebracket  &ruenquotes
   &ruenat    &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS          &kp PERCENT  &ruenopenbrace    &ruensimicolon  &ruenclosebrace    &ruenaquote
   &ruenhash  &kp ASTERISK          &ruencolon  &ruenslash             &ruentilde        &ruenpipe    &kp EXCL          &ruencomma      &ruenquest         &ruendot
                                    &trans      &mo 7                  &kp UNDERSCORE    &trans       &trans            &trans
