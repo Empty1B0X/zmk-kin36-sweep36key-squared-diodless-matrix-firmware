@@ -327,7 +327,7 @@
             bindings = <
   &kp DOLLAR   &kp LESS_THAN         &kp EQUAL  &kp GREATER_THAN       &kp GRAVE         &kp CARET    &kp LBKT         &kp AMPERSAND  &kp RBKT         &kp DOUBLE_QUOTES
   &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp PLUS          &kp PERCENT  &kp LEFT_BRACE   &kp SEMICOLON  &kp RIGHT_BRACE  &kp SINGLE_QUOTE
-  &kp HASH     &kp ASTERISK          &kp COLON  &kp NON_US_BACKSLASH   &kp TILDE         &kp PIPE     &kp EXCLAMATION  &kp COMMA      &kp QUESTION     &kp PERIOD
+  &kp HASH     &kp ASTERISK          &kp COLON  &kp BACKSLASH          &kp TILDE         &kp PIPE     &kp EXCLAMATION  &kp COMMA      &kp QUESTION     &kp PERIOD
                                      &trans     &mo 3                  &kp UNDERSCORE    &trans       &trans           &trans
             >;
         };
