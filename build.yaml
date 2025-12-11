@@ -19,7 +19,7 @@
 ---
 include:
   # keyboard: cradio sweep
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: kin36_sweep36key_left
     snippet: studio-rpc-usb-uart
     #snippet: zmk-usb-logging
